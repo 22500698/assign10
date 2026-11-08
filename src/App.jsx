@@ -17,7 +17,7 @@ function App() {
   }, [todos]);
 
   const addTodo = (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
     if (inputText === '') return;
 
     setTodos([...todos, { text: inputText, completed: false }]);
@@ -41,17 +41,17 @@ function App() {
 
   return (
     <div id='main-container'>
-      <Header/>
+      <Header />
       <main>
         <form onSubmit={addTodo}>
           <div id='todo-container'>
-            <h2 id='todo-list-header'>To-Do List</h2>
+            <h2 id='todo-list-header'>조현웅 22500698 TodoList</h2>
             <div id='todo-input-group'>
-              <input 
-                type="text" 
-                value={inputText} 
-                onChange={(e) => setInputText(e.target.value)} 
-                placeholder='Type something...' 
+              <input
+                type="text"
+                value={inputText}
+                onChange={(e) => setInputText(e.target.value)}
+                placeholder='Type something...'
                 maxLength={100}
               />
               <button type="submit" id='submit_button'>Add</button>
@@ -64,7 +64,7 @@ function App() {
           })}
         </ul>
       </main>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
